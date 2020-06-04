@@ -1,12 +1,9 @@
 var len;
 var angle; 
 var detail = 8;
-var slider;
-var cnv;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  //slider = createSlider(0,2.36, PI / 2, 0.01);  // Creating slider to choose values between 0 and 45deg. and step-size 0.01 .
   len = height * (2/6);
 }
 
