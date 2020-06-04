@@ -1,6 +1,6 @@
 var len;
 var angle; 
-var detail = 8;
+var detail = 6;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -9,8 +9,8 @@ function setup() {
 
 function draw() {
   background(51);
-  angle = map(mouseX, (width/10),  width - (width/10) , 0  , 2.36, true); //.value(); // Setting angle var. from slider. 
-  len   = map(mouseY, (height/10), height - (height/10), 400, 100, true);
+  angle = map(mouseX, (width/10),  width - (width/10) , 0  , 2.36, true); // Mapping mouseX value in a nice viewing range.
+  len   = map(mouseY, (height/10), height - (height/10), 400, 100, true); // Mapping mouseY value for handling tree height.
   translate(width / 2,height);  // Setting up (0,0 co-ord.) init point to middle-bottom of screen.  
   stroke(255);            // Line Color set to white(255).
   branch(len);          
