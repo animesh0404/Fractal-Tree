@@ -1,16 +1,17 @@
 var len = 100;
-var angle = PI/4; // Calculating 45deg. 
+var angle = PI / 4; // Calculating 45deg. 
 
 var slider;
 
 function setup() {
   createCanvas(400,400);
+  slider = createSlider(0, TWO_PI, PI / 4);  // Creating slider to choose values between 0 and 45deg.
 }
 
 function draw() {
   background(51);
-  translate(200,height);  // Setting up (0,0 co-ord.) init point to middle-bottom of screen.
-  
+  angle = slider.value(); // Setting angle var. from slider. 
+  translate(200,height);  // Setting up (0,0 co-ord.) init point to middle-bottom of screen.  
   stroke(255);            // Line Color set to white(255).
   branch(len);          
 }
