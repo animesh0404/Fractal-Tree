@@ -6,11 +6,14 @@ This is simple fractal tree created in p5.js, I've learned from this youtube cha
 this is my personal take on this project.
 
 
-## Chek it out on your browser have some fun playing with it. 
+## Chek it out on your browser have some fun playing with it:
+
 [Fractal-Tree](https://animesh0404.github.io/Fractal-Tree/)
 
 ## Usage:
+
 (X-Axis) - Moving mouse horizontally across the screen will expand the Tree.
+
 (Y-Axis) - Moving mouse vertically across the screen with increase/decrease height of tree.
 
 ### For best experience view it on a Desktop/Laptop.
