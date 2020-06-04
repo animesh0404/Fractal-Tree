@@ -14,5 +14,9 @@ function branch(len) {
   line(0,0,0,-len);
   translate(0,-len);      // Moving init point to new drawn line's top.
   rotate(PI/4);           // Rotate 45deg. the page.
-  line(0,0,0,-len * 0.67);       // Drawing new brach and reducing it by 2/3 size.
+
+  if( len > 4){           // Recursion Base only draw when length is greater than 4 pix.
+    branch(len * 0.67);     // Recursive call
+  }
+    //line(0,0,0,-len * 0.67);       // Drawing new brach and reducing it by 2/3 size.
 }
