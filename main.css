@@ -3,6 +3,15 @@ body {
     margin: 0;
   }
 
+#canvas {
+    padding: 20px 20px;
+}
+
+
+#ctrlpanel {
+    padding: 20px 20px;
+}
+
 .sliders {
-    position: relative;
+    background-color: aqua;
 }

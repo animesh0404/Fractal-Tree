@@ -1,17 +1,19 @@
 var len = 250;
 var angle = 0; // Calculating 45deg. 
-var detail = 4.6;
+var detail = 6;
 var slider;
+var cnv;
 
 function setup() {
-  createCanvas(800,800);
-  slider = createSlider(0,2.36, 2.5, 0.01);  // Creating slider to choose values between 0 and 45deg. and step-size 0.01 .
-  slider.class("sliders");
+  createCanvas(displayWidth, displayHeight);
+  //slider = createSlider(0,2.36, PI / 2, 0.01);  // Creating slider to choose values between 0 and 45deg. and step-size 0.01 .
+  len = height * (2/6);
 }
 
 function draw() {
   background(51);
-  angle = slider.value(); // Setting angle var. from slider. 
+  angle = map(mouseX, 0, width, 0, 2.36); //.value(); // Setting angle var. from slider. 
+  len = map(mouseY, 0, height, 400, 100);
   translate(width / 2,height);  // Setting up (0,0 co-ord.) init point to middle-bottom of screen.  
   stroke(255);            // Line Color set to white(255).
   branch(len);          
