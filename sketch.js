@@ -3,24 +3,26 @@ var angle;
 var detail = 6;
 
 function setup() {
-  createCanvas(windowWidth - (windowWidth * 0.015), windowHeight - (windowHeight * 0.025));
-  len = height * (2/6);
+  createCanvas(windowWidth - (windowWidth * 0.015), windowHeight - (windowHeight * 0.025)); // Setting up viewport.
+  len = height * (2/6);                                                                     // Setting up intial height of tree.
 }
 
 function draw() {
-  background(51);
+  background(0);
   angle = map(mouseX, (width/10),  width - (width/10) , 0  , 2.36, true); // Mapping mouseX value in a nice viewing range.
   len   = map(mouseY, (height/10), height - (height/10), 400, 100, true); // Mapping mouseY value for handling tree height.
-  translate(width / 2,height);  // Setting up (0,0 co-ord.) init point to middle-bottom of screen.  
-  stroke(255);            // Line Color set to white(255).
-  branch(len);          
+  var col = map(len,400,100,255,0,true);                                  // Mapping color in tree's length range.
+  translate(width / 2,height);                                            // Setting up (0,0 co-ord.) init point to middle-bottom of screen.  
+  colorMode(HSB);                                                         // Setting color mode to HSB.
+  stroke(col,255,100);                                                    // Line Color updates according to length of tree.
+  branch(len);        
 }
 
 function branch(len) {
   line(0,0,0,-len);
   translate(0,-len);      // Moving init point to new drawn line's top.
 
-  if( len > detail) {          // Recursion Base only draw when length is greater than 4 pix.
+  if( len > detail) {     // Recursion Base only draw when length is greater than 4 pix.
     push();               //Remeber new tarnslated position.
     rotate(angle);        // Rotation in right side (+angle).
     branch(len * 0.67);   // Recursive call
@@ -31,7 +33,6 @@ function branch(len) {
     branch(len * 0.67);   
     pop();      
   }
-    //line(0,0,0,-len * 0.67);       // Drawing new brach and reducing it by 2/3 size.
 }
 
 function windowResized() {
