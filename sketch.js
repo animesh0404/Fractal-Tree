@@ -1,6 +1,6 @@
 var len;
 var angle; 
-var detail = 6;
+var detail = 8;
 
 function setup() {
   createCanvas(windowWidth - (windowWidth * 0.015), windowHeight - (windowHeight * 0.025)); // Setting up viewport.
@@ -14,7 +14,7 @@ function draw() {
   var col = map(len,400,100,255,0,true);                                  // Mapping color in tree's length range.
   translate(width / 2,height);                                            // Setting up (0,0 co-ord.) init point to middle-bottom of screen.  
   colorMode(HSB);                                                         // Setting color mode to HSB.
-  stroke(col,255,100);                                                    // Line Color updates according to length of tree.
+  stroke(col,255,150);                                                    // Line Color updates according to length of tree.
   branch(len);        
 }
 
