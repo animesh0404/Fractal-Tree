@@ -3,7 +3,7 @@ var angle;
 var detail = 6;
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(windowWidth - (windowWidth * 0.015), windowHeight - (windowHeight * 0.025));
   len = height * (2/6);
 }
 
@@ -32,4 +32,8 @@ function branch(len) {
     pop();      
   }
     //line(0,0,0,-len * 0.67);       // Drawing new brach and reducing it by 2/3 size.
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth - (windowWidth * 0.015), windowHeight - (windowHeight * 0.025));
 }
