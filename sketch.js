@@ -11,10 +11,10 @@ function draw() {
   background(0);
   angle = map(mouseX, (width/10),  width - (width/10) , 0  , 2.36, true); // Mapping mouseX value in a nice viewing range.
   len   = map(mouseY, (height/10), height - (height/10), 400, 100, true); // Mapping mouseY value for handling tree height.
-  var col = map(len,400,100,255,0,true);                                  // Mapping color in tree's length range.
+  var col = map(len,400,100,0,360,true);                                  // Mapping color in tree's length range.
   translate(width / 2,height);                                            // Setting up (0,0 co-ord.) init point to middle-bottom of screen.  
-  colorMode(HSB);                                                         // Setting color mode to HSB.
-  stroke(col,255,150);                                                    // Line Color updates according to length of tree.
+  colorMode(HSB,360,255,255);                                                         // Setting color mode to HSB.
+  stroke(col,255,255);                                                    // Line Color updates according to length of tree.
   branch(len);        
 }
 
