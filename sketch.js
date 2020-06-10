@@ -3,7 +3,8 @@ var angle;
 var detail = 8;
 
 function setup() {
-  createCanvas(windowWidth - (windowWidth * 0.015), windowHeight - (windowHeight * 0.025)); // Setting up viewport.
+  var cnv = createCanvas(windowWidth - ((windowWidth * 0.015)+10), windowHeight - ((windowHeight * 0.025) + 20)); // Setting up viewport.
+  cnv.id('mycanvas');
   len = height * (2/6);                                                                     // Setting up intial height of tree.
 }
 

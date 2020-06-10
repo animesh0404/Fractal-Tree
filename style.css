@@ -1,0 +1,20 @@
+header {
+    margin: auto;
+    background-color:rgb(27, 27, 27);
+    padding: 15px;
+}
+
+h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;   
+    text-align: center;
+    color: #fff;
+}
+
+body {
+    background-color: rgb(167, 167, 167);
+}
+
+#cnv {
+    align-self: center;
+}
